@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Round&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+}
+
+.navbar{
+    background: white;
+}
+
+.navbar-brand{
+    font-family: 'Nova Round', cursive;
+    font-weight: bold;
+    color: #35034C !important;
+}
+
+.nav-link{
+    color: black !important; 
+    font-weight: bold;
+}
+
+.con-desc{
+    background: url(https://webstockreview.net/images/astronomy-clipart-cartoon-8.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 309px;
+}
+
+.desc{
+    color : #35034C;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 80px;
+    width: 309px;
+}
+
+.button-more{
+    width: 192px;
+    height: 66px;
+    font-size: 18px;
+    border-radius: 10px;
+    background: white;
+    border: 2px solid #35034C;
+    font-weight: 600;
+}
+
+.button-more:hover{
+    background: #35034C;
+    color: white;
+    cursor: pointer;
+}
+
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+    body{
+        height: 100vh;
+        background: url(http://localhost:8080/assets/image/bg1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+    .navbar{
+        background: transparent;
+    }
+    .navbar-brand{
+        font-size: 32px;
+        color: #35034C;
+    }
+    .nav-link{
+        color: white !important; 
+        font-size: 20px;
+        margin-left: 50px;
+        font-weight: bold;
+    }
+    .nav-link:hover::after{
+        content: "";
+        display: block;
+        border-bottom: 3px solid white;
+        width: 50%;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+    }
+    .con-desc{
+        background: none;
+    }
+    .title{
+        text-transform: uppercase;
+        font-size: 52px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+    }
+    .title-desc{
+        font-size: 25px;
+        font-weight: 500;
+        margin-top: 3px;
+    }
+    .more-info{
+        margin-top: 3px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
+
+@media (min-width: 1200px) {
+
+}
