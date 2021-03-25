@@ -3,8 +3,8 @@ const path = require("path");
  
 module.exports = {
    entry: {
-       index:"./src/index.js",
-       card:"./src/card.js"
+       index:"./src/js/index.js",
+       card:"./src/js/card.js"
     },
    output: {
        path: path.resolve(__dirname, "dist"),
@@ -35,12 +35,12 @@ module.exports = {
    },
    plugins: [
        new HtmlWebpackPlugin({
-           template: "./src/index.html",
+           template: "./src/html/index.html",
            filename: "index.html",
            chunks : ['index']
        }),
        new HtmlWebpackPlugin({
-        template: "./src/card.html",
+        template: "./src/html/card.html",
         filename: "card.html",
         chunks : ['card']
     })
