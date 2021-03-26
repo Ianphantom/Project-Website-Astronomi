@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Round&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a:hover{
+    text-decoration: none;
+}
+body{
+    height: 100vh;
+    background-color: #F4F3F6;
+}
+
+.navbar{
+    background: white;
+}
+
+.navbar-brand{
+    font-family: 'Nova Round', cursive;
+    font-weight: bold;
+    color: #35034C !important;
+}
+
+.nav-link{
+    color: black !important; 
+    font-weight: bold;
+}
+
+.panel{
+    padding: 20px;
+    border-radius: 15px;
+    background-color: white;
+    width: 138px;
+    box-shadow: 3px 3px 3px #9C9090;
+    font-weight: 600;
+    cursor: pointer;
+}
+.apod{
+    color: #35034C;
+}
+
+.favorites{
+    background: #35034C;
+    color: white;
+}
+
+.apod:hover{
+    color: white;
+    background: #35034C;
+}
+
+.favorites:hover{
+    color:#35034C;
+    background: white;
+}
+
+.apod-title{
+    color : #35034C;
+    font-family: 'Nova Round', cursive;
+} 
+
+.clickable{
+    cursor: pointer;
+}
+
+.card{
+    box-shadow: 3px 3px 3px #9C9090;
+}
+
+.card:hover{
+    box-shadow: 5px 5px 5px #9C9090;
+}
+.card-title{
+    color: #35034C;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.card-text{
+    color: #9C9090;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.save{
+    color:#ff6200;
+}
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+    .navbar{
+        background: white;
+    }
+    .navbar-brand{
+        font-size: 32px;
+        color: #35034C;
+    }
+    .nav-link{
+        color: #35034C !important; 
+        font-size: 20px;
+        margin-left: 50px;
+        font-weight: bold;
+    }
+    .nav-link:hover::after{
+        content: "";
+        display: block;
+        border-bottom: 3px solid white;
+        width: 50%;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+    }
+    .card-title{
+        font-size: 20px;
+    }
+    
+    .card-text{
+        font-size: 15px
+    }
+    .data{
+        width: 70%;
+    }
+}
+
+@media (min-width: 1200px) {
+
+}
