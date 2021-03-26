@@ -67,7 +67,7 @@ body{
 @media (min-width: 992px) {
     body{
         height: 100vh;
-        background: url(http://localhost:8080/assets/image/bg1.png);
+        background: url(/assets/image/bg1.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: right;
