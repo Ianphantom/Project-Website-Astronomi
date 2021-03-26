@@ -14,7 +14,7 @@ class CardFeatures extends HTMLElement {
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-md-6 col-sm-6" style="margin-bottom: 30px;">
-                                <a class="card-links" href="jumlahPenumpang.php?id=1">
+                                <a class="card-links" href="jumlahPenumpang.php">
                                     <div class="card h-100">
                                         <img src="../assets/image/Image 6.png" class="card-img-top" alt="...">
                                         <div class="card-body">
@@ -25,7 +25,7 @@ class CardFeatures extends HTMLElement {
                                 </a>
                             </div>
                             <div class="col-md-6 col-sm-6" style="margin-bottom: 30px;">
-                                <a class="card-links" href="jumlahPenumpang.php?id=2">
+                                <a class="card-links" href="jumlahPenumpang.php">
                                     <div class="card h-100">
                                         <img src="../assets/image/Image 4.png" class="card-img-top" alt="...">
                                         <div class="card-body">
@@ -38,7 +38,7 @@ class CardFeatures extends HTMLElement {
                         </div>
                         <div class="row">
                             <div class="col-md-6 col-sm-6" style="margin-bottom: 30px;">
-                                <a class="card-links" href="jumlahPenumpang.php?id=3">
+                                <a class="card-links" href="jumlahPenumpang.php">
                                     <div class="card h-100">
                                         <img src="../assets/image/Image 5.png" class="card-img-top" alt="...">
                                         <div class="card-body">
@@ -49,7 +49,7 @@ class CardFeatures extends HTMLElement {
                                 </a>
                             </div>
                             <div class="col-md-6 col-sm-6" style="margin-bottom: 30px;">
-                                <a class="card-links" href="jumlahPenumpang.php?id=4">
+                                <a class="card-links" href="jumlahPenumpang.php">
                                     <div class="card h-100">
                                         <img src="../assets/image/Image 3.png" class="card-img-top" alt="...">
                                         <div class="card-body">
