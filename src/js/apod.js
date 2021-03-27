@@ -1,3 +1,8 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../../assets/css/apod.css'
+import 'bootstrap';
+import '../../components/NavBar.js';
+import '../../components/ApodContent.js';
 import * as api from "./api.js";
 import { saveNasaPictures } from'./api.js';
 window.saveNasaPictures  = saveNasaPictures;
