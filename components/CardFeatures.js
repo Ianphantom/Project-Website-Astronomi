@@ -14,7 +14,7 @@ class CardFeatures extends HTMLElement {
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-md-6 col-sm-6" style="margin-bottom: 30px;">
-                                <a class="card-links" href="jumlahPenumpang.php">
+                                <a class="card-links" href="apod.html">
                                     <div class="card h-100">
                                         <img src="../assets/image/Image 6.png" class="card-img-top" alt="...">
                                         <div class="card-body">
