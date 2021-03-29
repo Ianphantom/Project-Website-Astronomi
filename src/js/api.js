@@ -2,6 +2,7 @@ export const apikey = "TXr4zXrvXbcfdc1C1b6qBw4IbLArAeDyCSZmNvUZ";
 export const apod_url = `https://api.nasa.gov/planetary/apod?api_key=${apikey}&count=10`;
 export let resultArrayAPOD = [];
 export let favoritesAPOD = {};
+export const loader = document.querySelector('.loader');
 export const status = response => {
     if(response.status !== 200){    
         console.log("Error : " + response.status);
@@ -29,6 +30,7 @@ export const fetchAPI = url => {
 export const getAPOD = () =>{
     fetchAPI(apod_url)
     .then(data => {
+        loader.classList.remove('hidden');
         showApod(data);
         resultArrayAPOD = data;
         console.log(resultArrayAPOD)
@@ -58,14 +60,20 @@ export const showApod = data => {
         `
     });
     document.getElementById("apod-data").innerHTML = apoddata;
+    loader.classList.add('hidden');
 }
 
 export const saveNasaPictures = (apodurl) => {
+    const saveConfirmed = document.querySelector('.save-confirmed');
     console.log(apodurl);
     resultArrayAPOD.forEach(function(item){
         if(item.url.includes(apodurl) && !favoritesAPOD[apodurl]){
             favoritesAPOD[apodurl] = item;
         }
+        saveConfirmed.hidden = false;
+        setTimeout(() => {
+            saveConfirmed.hidden = true;
+        }, 2000);
         localStorage.setItem('nasaFavorites', JSON.stringify(favoritesAPOD));
     })
 }
