@@ -77,3 +77,44 @@ export const saveNasaPictures = (apodurl) => {
         localStorage.setItem('nasaFavorites', JSON.stringify(favoritesAPOD));
     })
 }
+
+export const getFavorites = () => {
+    loader.classList.add('hidden');
+    favoritesAPOD = JSON.parse(localStorage.getItem('nasaFavorites'));
+    
+    showApodFavorites(Object.values(favoritesAPOD));
+    
+    // document.getElementById("apod-data").innerHTML = favoritesAPOD;
+}
+
+export const showApodFavorites = data => {
+    let apoddata = "";
+    data.forEach(function (apod){
+        apoddata += `
+        <div class="col-md-10 col-sm-10 mb-5">
+            <div class="card h-100">
+                <img src="${apod.url}" class="card-img-top" alt="apod image">
+                <div class="card-body">
+                    <div class="d-flex flex-row justify-content-center">
+                        <div class="p-2"><h5 class="card-title text-center">${apod.title}</h5></div>
+                        <div class="p-2"><h5 class="card-title text-center">•</h5></div>
+                        <div class="p-2"><h5 class="clickable save card-title text-center" onclick="deleteNasaPictures('${apod.url}')">Delete</h5></div>
+                    </div>
+                    <p class="card-text">${apod.explanation}</p>
+                </div>
+            </div>
+        </div>
+        `
+    });
+    document.getElementById("apod-data").innerHTML = apoddata;
+    loader.classList.add('hidden');
+}
+
+export function deleteNasaPictures(itemUrl) {
+    if (favoritesAPOD[itemUrl]) {
+      delete favoritesAPOD[itemUrl];
+      // Set Favorites in localStorage
+      localStorage.setItem('nasaFavorites', JSON.stringify(favoritesAPOD));
+      getFavorites();
+    }
+}

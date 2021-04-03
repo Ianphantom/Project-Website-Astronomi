@@ -6,6 +6,8 @@ import '../../components/ApodContent.js';
 import * as api from "./api.js";
 import { saveNasaPictures } from'./api.js';
 window.saveNasaPictures  = saveNasaPictures;
+import { deleteNasaPictures } from'./api.js';
+window.deleteNasaPictures  = deleteNasaPictures;
 document.addEventListener("DOMContentLoaded", function() {
     loadNav();
    
@@ -19,6 +21,17 @@ document.addEventListener("DOMContentLoaded", function() {
           document.querySelectorAll(".navigasi").forEach(function(elm) {
             elm.innerHTML = xhttp.responseText;
           });
+
+          document.querySelectorAll(".apodcard, .apodfavorites").forEach(function(elm){
+            elm.addEventListener("click", function(event){
+              page = elm.getAttribute("href").substr(1);
+              if (page === "" || page == "apodcard"){
+                api.getAPOD();
+              }else if(page == "apodfavorites"){
+                api.getFavorites();
+              }
+            })
+          })
         }
       };
       xhttp.open("GET", "../../pages/apodNav.html", true);
@@ -27,7 +40,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let page = window.location.hash.substr(1);
     if (page === "" || page == "apodcard"){
-        api.getAPOD();
+      api.getAPOD();
+    }else if(page == "apodfavorites"){
+      api.getFavorites();
     }
-    
 });
