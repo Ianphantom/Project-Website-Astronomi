@@ -5,7 +5,10 @@ module.exports = {
    entry: {
        index:"./src/js/index.js",
        card:"./src/js/card.js",
-       apod : "./src/js/apod.js"
+       apod : "./src/js/apod.js",
+       insight : "./src/js/insight.js",
+       astronomy : "./src/js/astronomy.js",
+       news : "./src/js/news.js"
     },
    output: {
        path: path.resolve(__dirname, "dist"),
@@ -49,6 +52,21 @@ module.exports = {
             template: "./src/html/apod.html",
             filename: "apod.html",
             chunks : ['apod']
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/html/insight.html",
+            filename: "insight.html",
+            chunks : ['insight']
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/html/astronomy.html",
+            filename: "astronomy.html",
+            chunks : ['astronomy']
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/html/news.html",
+            filename: "news.html",
+            chunks : ['news']
         })
     ]
 }

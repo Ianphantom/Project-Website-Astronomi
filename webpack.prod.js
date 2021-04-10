@@ -21,12 +21,16 @@ module.exports = merge(common, {
            }
        ]
    },
-   plugins: [
+    plugins: [
         new CopyWebpackPlugin({
             patterns: [
                 {
-                    from: path.resolve(__dirname, 'assets'),
-                    to: path.resolve(__dirname, 'dist/assets')
+                    from: path.resolve(__dirname, 'assets/image'),
+                    to: path.resolve(__dirname, 'dist/assets/image')
+                },
+                {
+                    from: path.resolve(__dirname, 'pages'),
+                    to: path.resolve(__dirname, 'dist/pages')
                 }
             ]
         })
