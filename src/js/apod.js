@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
           document.querySelectorAll(".navigasi").forEach(function(elm) {
             elm.innerHTML = xhttp.responseText;
           });
-
           document.querySelectorAll(".apodcard, .apodfavorites").forEach(function(elm){
             elm.addEventListener("click", function(event){
               page = elm.getAttribute("href").substr(1);
@@ -40,8 +39,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let page = window.location.hash.substr(1);
     if (page === "" || page == "apodcard"){
-      api.getAPOD();
+        api.getAPOD();
     }else if(page == "apodfavorites"){
       api.getFavorites();
     }
+    
 });
